@@ -353,3 +353,4 @@ db
 /ASE2017.pdf
 /dataset_paper_orig.pdf
 /dataset_paper.pdf
+*.sqlite
