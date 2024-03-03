@@ -346,6 +346,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,macos,windows,python
-*.sql
-*.csv
-bd
+new_pullreq.sql
+dataset.sql
+new_pullreq.csv
+db
+/ASE2017.pdf
+/dataset_paper_orig.pdf
+/dataset_paper.pdf
