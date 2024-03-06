@@ -21,3 +21,11 @@ WHERE
     inte_country IS NOT NULL AND
     inte_country != ''
 ;
+
+DELETE FROM filtered_data
+WHERE reponame NOT IN (
+    SELECT reponame
+    FROM filtered_data
+    GROUP BY reponame
+    HAVING COUNT(*) >= 10
+);
