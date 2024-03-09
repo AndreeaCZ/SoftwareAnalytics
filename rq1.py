@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
+import statsmodels.api as sm
 
 # Connect to the SQLite database
 conn = sqlite3.connect('identifier.sqlite')
@@ -18,7 +19,7 @@ conn.close()
 
 # Define the independent variables (features) and dependent variable
 X = data[['same_country', 'team_size', 'num_commits', 'num_comments', 'project_age']]  # Independent variables
-y = data['mergetime_minutes']  # Dependent variable
+Y = data['mergetime_minutes']  # Dependent variable
 
 # # Get the data types of each column
 # all_columns = X.columns
@@ -41,18 +42,34 @@ y = data['mergetime_minutes']  # Dependent variable
 #
 
 # Split the data into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
 # Train the Multiple Linear Regression model
-model = LinearRegression()
-model.fit(X_train, y_train)
+# model = LinearRegression()
+# model.fit(X_train, y_train)
+#
+# # Print the coefficients
+# print('Intercept:', model.intercept_)
+# print('Coefficients:', model.coef_)
+#
+# # Evaluate the model
+# train_score = model.score(X_train, y_train)
+# test_score = model.score(X_test, y_test)
+# print('Train R^2 Score:', train_score)
+# print('Test R^2 Score:', test_score)
 
-# Print the coefficients
-print('Intercept:', model.intercept_)
-print('Coefficients:', model.coef_)
+X_train = sm.add_constant(X_train)
+X_test = sm.add_constant(X_test)
+
+# Train the Multiple Linear Regression model
+model = sm.OLS(y_train, X_train)
+result = model.fit()
+
+# Print the summary which includes coefficients
+print(result.summary())
 
 # Evaluate the model
-train_score = model.score(X_train, y_train)
-test_score = model.score(X_test, y_test)
+train_score = result.rsquared
+test_score = result.rsquared_adj
 print('Train R^2 Score:', train_score)
 print('Test R^2 Score:', test_score)
