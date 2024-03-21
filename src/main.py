@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import f_oneway
 
 
-conn = sqlite3.connect('db')
+conn = sqlite3.connect('../db')
 
 c = conn.cursor()
 

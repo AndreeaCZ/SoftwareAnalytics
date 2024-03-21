@@ -2,7 +2,7 @@ import sqlite3
 from scipy.stats import f_oneway
 
 
-conn = sqlite3.connect('db')
+conn = sqlite3.connect('../db')
 
 c = conn.cursor()
 

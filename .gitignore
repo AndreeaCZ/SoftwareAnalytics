@@ -351,6 +351,6 @@ dataset.sql
 new_pullreq.csv
 db
 /ASE2017.pdf
-/dataset_paper_orig.pdf
-/dataset_paper.pdf
+/dataset/dataset_paper_orig.pdf
+/dataset/dataset_paper.pdf
 *.sqlite

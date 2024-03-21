@@ -7,7 +7,7 @@ from sklearn.compose import ColumnTransformer
 import statsmodels.api as sm
 
 # Connect to the SQLite database
-conn = sqlite3.connect('identifier.sqlite')
+conn = sqlite3.connect('../dataset/identifier.sqlite')
 
 # Query the data from the 'filtered_data' table into a pandas DataFrame
 query = "SELECT * FROM filtered_data"

@@ -3,7 +3,7 @@ import pandas as pd
 import statsmodels.api as sm
 
 # Connect to the SQLite database
-conn = sqlite3.connect('identifier.sqlite')
+conn = sqlite3.connect('../dataset/identifier.sqlite')
 
 # Query the data from the database
 query = "SELECT reponame, team_size, num_commits, num_comments, project_age, AVG(mergetime_minutes) AS avg_mergetime, COUNT(DISTINCT inte_country) AS num_countries FROM filtered_data GROUP BY reponame"

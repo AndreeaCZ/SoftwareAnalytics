@@ -5,7 +5,7 @@ import pandas as pd
 import pycountry
 
 
-conn = sqlite3.connect('db')
+conn = sqlite3.connect('../db')
 
 c = conn.cursor()
 

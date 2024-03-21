@@ -2,7 +2,7 @@ import sqlite3
 from scipy.stats import f_oneway
 import numpy as np
 
-conn = sqlite3.connect('db')
+conn = sqlite3.connect('../db')
 c = conn.cursor()
 
 c.execute('select inte_country, perc_inte_neg_emo from filtered_data where inte_first_emo != "" and inte_first_emo is not null '
