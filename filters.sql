@@ -1,3 +1,4 @@
+-- not this one this is the old one
 SELECT SUM(pull_request_count) AS total_pull_requests
 FROM (
 SELECT
