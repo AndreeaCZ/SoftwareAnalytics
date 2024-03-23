@@ -5,7 +5,7 @@
 The topic of this project is:
 ```Increase global collaboration — impact on review speed in industry```
 
-We perform a statistical analysis on a dataset of pull requests from GitHub. The dataset is obtained from [https://zenodo.org/records/3922907](). 
+We perform a statistical analysis on a dataset of pull requests from GitHub. The dataset is obtained from [https://zenodo.org/records/3922907](https://zenodo.org/records/3922907). We used version 5 of the dataset. 
 We are grateful to Zhang et al., the authors of <b>On the Shoulders of Giants: A New Dataset for Pull-based
 Development Research</b> for providing this dataset.
 
