@@ -31,4 +31,4 @@ We used several control variables in our analysis as can be seen in the correspo
 For RQ3 and RQ4, we used the ANOVA test to determine whether there is a significant difference between the groups.
 
 ## Results
-The results of our analysis are presented in a blogpost which can be found at the following link: [google.com]().
+The results of our analysis are presented in a blogpost which can be found at the following link: [https://medium.com/@matej.kucera.01/global-collaboration-good-3482ba5af4c1](https://medium.com/@matej.kucera.01/global-collaboration-good-3482ba5af4c1).
